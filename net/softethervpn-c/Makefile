@@ -13,8 +13,8 @@ PKG_REALVERSION:=4.44-9807
 PKG_VERSION:=$(word 1,$(subst -, ,$(PKG_REALVERSION)))
 PKG_VERREL:=rtm
 
-PKG_SOURCE:=softether-src-v$(PKG_REALVERSION)-$(PKG_VERREL).tar.gz
-PKG_SOURCE_URL:=https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases/download/v$(PKG_REALVERSION)-$(PKG_VERREL)
+PKG_SOURCE:=v$(PKG_REALVERSION)-$(PKG_VERREL).tar.gz
+PKG_SOURCE_URL:=https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/archive/refs/tags
 PKG_HASH:=928d882d5fc23e00f0a5fa4ebf292ab9
 
 # PKG_MAINTAINER:=Federico Di Marco <fededim@gmail.com>
