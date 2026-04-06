@@ -12,10 +12,12 @@ PKG_NAME:=softethervpn-c
 PKG_REALVERSION:=4.44-9807
 PKG_VERSION:=$(word 1,$(subst -, ,$(PKG_REALVERSION)))
 PKG_VERREL:=rtm
+PKG_DATE:=2025.04.16
 
-PKG_SOURCE:=v$(PKG_REALVERSION)-$(PKG_VERREL).tar.gz
-PKG_SOURCE_URL:=https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/archive/refs/tags
-PKG_HASH:=544389084d49f83f630ad674da727f98
+PKG_BUILD_DIR:=$(BUILD_DIR)/v$(PKG_REALVERSION)
+PKG_SOURCE:=softether-src-v$(PKG_REALVERSION)-$(PKG_VERREL).tar.gz
+PKG_SOURCE_URL:=http://jp.softether-download.com/files/softether/v$(PKG_REALVERSION)-$(PKG_VERREL)-$(PKG_DATE)-tree/Source_Code/
+PKG_HASH:=f4fdc5f791ae318c4a70c1bc95b15ee24c264d8f3dc32e626ee9d5382da849e7
 
 # PKG_MAINTAINER:=Federico Di Marco <fededim@gmail.com>
 PKG_LICENSE:=GPL-2.0-or-later
