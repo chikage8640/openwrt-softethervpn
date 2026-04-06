@@ -15,7 +15,7 @@ PKG_VERREL:=rtm
 
 PKG_SOURCE:=v$(PKG_REALVERSION)-$(PKG_VERREL).tar.gz
 PKG_SOURCE_URL:=https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/archive/refs/tags
-PKG_HASH:=928d882d5fc23e00f0a5fa4ebf292ab9
+PKG_HASH:=544389084d49f83f630ad674da727f98
 
 # PKG_MAINTAINER:=Federico Di Marco <fededim@gmail.com>
 PKG_LICENSE:=GPL-2.0-or-later
