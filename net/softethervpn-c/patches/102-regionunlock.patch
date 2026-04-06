@@ -1,3 +1,5 @@
+diff --git a/src/Cedar/Admin.c b/src/Cedar/Admin.c
+index 5e2ea80..3b0ab15 100644
 --- a/src/Cedar/Admin.c
 +++ b/src/Cedar/Admin.c
 @@ -2218,10 +2218,10 @@ UINT StSetAcList(ADMIN *a, RPC_AC_LIST *t)
@@ -87,6 +89,8 @@
  
  	CHECK_RIGHT;
  
+diff --git a/src/Cedar/Cedar.c b/src/Cedar/Cedar.c
+index 790e801..00ff67e 100644
 --- a/src/Cedar/Cedar.c
 +++ b/src/Cedar/Cedar.c
 @@ -1422,7 +1422,7 @@ void CleanupCedar(CEDAR *c)
@@ -107,6 +111,8 @@
  
  	StrCpy(c->OpenVPNDefaultClientOption, sizeof(c->OpenVPNDefaultClientOption), OVPN_DEF_CLIENT_OPTION_STRING);
  
+diff --git a/src/Cedar/Cedar.h b/src/Cedar/Cedar.h
+index 000cae1..fc8c9c7 100644
 --- a/src/Cedar/Cedar.h
 +++ b/src/Cedar/Cedar.h
 @@ -1043,8 +1043,8 @@ typedef struct CEDAR
@@ -120,6 +126,8 @@
  	LOCK *CurrentTcpQueueSizeLock;	// Current TCP send queue size lock
  	UINT CurrentTcpQueueSize;		// Current TCP send queue size
  	COUNTER *CurrentActiveLinks;	// Current active cascade connections
+diff --git a/src/Cedar/DDNS.c b/src/Cedar/DDNS.c
+index b6281ee..feb8539 100644
 --- a/src/Cedar/DDNS.c
 +++ b/src/Cedar/DDNS.c
 @@ -729,11 +729,11 @@ UINT DCRegister(DDNS_CLIENT *c, bool ipv6, DDNS_REGISTER_PARAM *p, char *replace
@@ -139,6 +147,8 @@
  		}
  	}
  	Unlock(c->Lock);
+diff --git a/src/Cedar/Hub.c b/src/Cedar/Hub.c
+index 1f827a9..23b621a 100644
 --- a/src/Cedar/Hub.c
 +++ b/src/Cedar/Hub.c
 @@ -920,10 +920,10 @@ bool IsIpDeniedByAcList(IP *ip, LIST *o)
@@ -171,6 +181,8 @@
  
  	if (IsIP4(ip))
  	{
+diff --git a/src/Cedar/Logging.c b/src/Cedar/Logging.c
+index e0fceaa..25a1fa3 100644
 --- a/src/Cedar/Logging.c
 +++ b/src/Cedar/Logging.c
 @@ -1119,10 +1119,10 @@ bool PacketLog(HUB *hub, SESSION *src_session, SESSION *dest_session, PKT *packe
@@ -188,6 +200,8 @@
  
  		if (hub->IsVgsHub)
  		{
+diff --git a/src/Cedar/Protocol.c b/src/Cedar/Protocol.c
+index 6d23e5c..b806213 100644
 --- a/src/Cedar/Protocol.c
 +++ b/src/Cedar/Protocol.c
 @@ -1607,8 +1607,8 @@ bool ServerAccept(CONNECTION *c)
@@ -280,6 +294,8 @@
  					break;
  
  				default:
+diff --git a/src/Cedar/Sam.c b/src/Cedar/Sam.c
+index 7e6e04f..f7f3e31 100644
 --- a/src/Cedar/Sam.c
 +++ b/src/Cedar/Sam.c
 @@ -187,10 +187,10 @@ bool SamAuthUserByPlainPassword(CONNECTION *c, HUB *hub, char *username, char *p
@@ -312,6 +328,8 @@
  
  	// Check expiration date
  	if (CheckXDateNow(x) == false)
+diff --git a/src/Cedar/Server.c b/src/Cedar/Server.c
+index dcac885..52be8a8 100644
 --- a/src/Cedar/Server.c
 +++ b/src/Cedar/Server.c
 @@ -913,10 +913,10 @@ void SiWriteSysLog(SERVER *s, char *typestr, char *hubname, wchar_t *message)
@@ -640,6 +658,8 @@
  
  	return s;
  }
+diff --git a/src/Cedar/Server.h b/src/Cedar/Server.h
+index 547df58..faf9b63 100644
 --- a/src/Cedar/Server.h
 +++ b/src/Cedar/Server.h
 @@ -424,12 +424,12 @@ struct LOG_FILE
@@ -685,6 +705,8 @@
  
  #endif	// SERVER_H
  
+diff --git a/src/Cedar/Virtual.c b/src/Cedar/Virtual.c
+index 2ce41b0..ee5b885 100644
 --- a/src/Cedar/Virtual.c
 +++ b/src/Cedar/Virtual.c
 @@ -9647,8 +9647,8 @@ void VirtualDhcpServer(VH *v, PKT *p)
@@ -707,3 +729,4 @@
  
  				if (opt->Opcode != DHCP_INFORM)
  				{
+
